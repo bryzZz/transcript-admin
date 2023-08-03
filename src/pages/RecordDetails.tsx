@@ -20,11 +20,11 @@ export const RecordDetails: React.FC = () => {
         <div className="flex w-full min-w-[400px] max-w-[546px] flex-1 flex-col justify-stretch gap-5">
           <Record />
 
-          <div className="h-full rounded-[20px] bg-[#F3F6FE] p-[15px]">
-            <h3 className="mb-[16px] text-[17px] font-medium text-black">
+          <div className="flex h-full flex-col gap-4 rounded-[20px] bg-[#F3F6FE] p-[15px]">
+            <h3 className="text-[17px] font-medium text-black">
               Краткая сводка
             </h3>
-            <div className="rounded-[10px] bg-[#FFFFFF] p-5 text-base leading-none text-[#1F1F1F]">
+            <div className="h-full justify-self-stretch rounded-[10px] bg-[#FFFFFF] p-5 text-base leading-none text-[#1F1F1F]">
               Диалог ведется между клиентом и представителем колл-центра.
               Основной тон разговора — деловой, вежливый, со стремлением к
               решению проблемы. Главная эмоция клиента — раздражение от проблем
