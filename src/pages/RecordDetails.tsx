@@ -42,7 +42,7 @@ export const RecordDetails: React.FC = () => {
             Полная транскрибация
           </h3>
           <div className="rounded-[10px] bg-[#FFFFFF] p-5">
-            <div className="custom-scroll max-h-[50vh] overflow-y-scroll pr-72 font-public-sans text-lg leading-7 tracking-[0.35px] text-[#1F1F1F]">
+            <div className="custom-scroll max-h-[40vh] overflow-y-scroll pr-72 font-public-sans text-lg leading-7 tracking-[0.35px] text-[#1F1F1F]">
               I was a government major which means I had to write a lot of
               papers. Now when a normal student writes a paper they might spread
               the work out a little like this. So you know. You get started
