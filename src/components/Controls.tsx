@@ -26,7 +26,7 @@ export const Controls: React.FC<ControlsProps> = ({ audioRef, isPlaying }) => {
 
   return (
     <button
-      className="bg-[#FFFFFF] w-[45px] h-[45px] flex items-center justify-center rounded-[45px] mr-[15px] -translate-x-[1px]"
+      className="mr-[15px] h-[45px] w-[45px] -translate-x-[1px] rounded-[45px] bg-[#FFFFFF] py-[13px] pl-[17px] pr-[11.5px]"
       onClick={handleClick}
     >
       {isPlaying ? <Play /> : <Play />}
