@@ -1,9 +1,17 @@
+import { Header } from "components/Header";
+import { Statistics } from "components/Statistics";
 import React from "react";
 
 export const App: React.FC = () => {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <div className="bg-[#242947] min-h-screen">
+      <div className="max-w-[1680px] w-full mx-auto pt-20">
+        <Header />
+
+        <main>
+          <Statistics />
+        </main>
+      </div>
     </div>
   );
 };
