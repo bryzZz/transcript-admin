@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { ReactComponent as DirectInbox } from "assets/direct-inbox.svg";
 import Avatar2 from "assets/avatar-2.png";
@@ -8,15 +9,18 @@ import audioSrc from "data/X2Download.app - Антон Чехов Человек
 
 export const Record: React.FC = () => {
   return (
-    <div className="rounded-[20px] pt-[15px] pb-4 pr-[14px] pl-[13px] bg-[#F3F6FE]">
-      <div className="flex items-center justify-between mb-9">
+    <div className="rounded-[20px] bg-[#F3F6FE] pb-4 pl-[13px] pr-[14px] pt-[15px]">
+      <div className="mb-9 flex items-center justify-between">
         <div className="flex items-center gap-[14px]">
-          <img className="rounded-full w-[46px] h-[46px]" src={Avatar2} />
+          <img className="h-[46px] w-[46px] rounded-full" src={Avatar2} />
           <div>
-            <h5 className="text-[17px] leading-5 font-medium text-black mb-1">
+            <Link
+              to={"/transcript-admin/records/0"}
+              className="mb-1 text-[17px] font-medium leading-5 text-black hover:text-cyan-700"
+            >
               Александр Морозов
-            </h5>
-            <p className="text-black font-medium text-[10px] opacity-50">
+            </Link>
+            <p className="text-[10px] font-medium text-black opacity-50">
               Менеджер
             </p>
           </div>
