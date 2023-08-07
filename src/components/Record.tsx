@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { ReactComponent as DirectInbox } from "assets/direct-inbox.svg";
-import Avatar2 from "assets/unsplash_pAtA8xe_iVM.png";
+import Avatar2 from "assets/unsplash_pAtA8xe_iVM-min.png";
 import { AudioPlayer } from "./AudioPlayer";
 
 // import audioSrc from "data/X2Download.app - Антон Чехов Человек в Футляре Аудиокнига Русская литература (книга чтение, школьная программа) (128 kbps).mp3";
@@ -41,7 +41,7 @@ export const Record: React.FC<RecordProps> = ({ data, className }) => {
               to={`${BASE_URL}records/${data.id}`}
               className="mb-1 text-[17px] font-medium leading-5 text-black hover:text-cyan-700"
             >
-              Никита Лепезин
+              Евгений Лапин
             </Link>
             <p className="text-[10px] font-medium text-black opacity-50">
               Поддержка

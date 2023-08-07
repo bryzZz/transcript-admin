@@ -1,6 +1,6 @@
 import React from "react";
 
-import Avatar from "assets/unsplash_pAtA8xe_iVM.png";
+import Avatar from "assets/unsplash_pAtA8xe_iVM-min.png";
 import { ReactComponent as Login } from "assets/login.svg";
 
 export const Header: React.FC = () => {
