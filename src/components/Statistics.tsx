@@ -1,4 +1,7 @@
 import React from "react";
+import useSWR from "swr";
+
+import { Call } from "types";
 
 import { ReactComponent as Chart } from "assets/chart.svg";
 import { ReactComponent as Verify } from "assets/verify.svg";
@@ -6,6 +9,8 @@ import { ReactComponent as AutoBrightness } from "assets/auto-brightness.svg";
 import { ReactComponent as Information } from "assets/information.svg";
 
 export const Statistics: React.FC = () => {
+  const { data } = useSWR<Call[]>("/calls");
+
   return (
     <div className="flex w-full flex-1 flex-col gap-5 md:max-w-[405px]">
       <div className="flex items-center gap-[31px] rounded-[30px] bg-[#D4D8F1] p-[30px]">
@@ -14,7 +19,7 @@ export const Statistics: React.FC = () => {
         </div>
         <div>
           <h3 className="text-[50px] font-medium leading-none text-black">
-            1583
+            {data?.length || 0}
           </h3>
           <p className="text-sm text-black opacity-60 ">Всего звонков</p>
         </div>
