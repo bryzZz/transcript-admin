@@ -22,12 +22,16 @@ export const Records: React.FC = () => {
         (a, b) =>
           new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime(),
       )
-      .map((data) => <Record key={data.id} data={data} className="basis-80" />);
+      .map((data) => (
+        <Record key={data.id} data={data} className="w-full max-w-[320px]" />
+      ));
   };
 
   return (
-    <div className="flex flex-1 flex-wrap items-start gap-[30px] rounded-[30px] bg-[#FFFFFF] p-[30px]">
-      {getContent()}
+    <div className="rounded-[30px] bg-[#FFFFFF] p-[30px]">
+      <div className="flex flex-wrap items-start gap-[30px]">
+        {getContent()}
+      </div>
     </div>
   );
 };
