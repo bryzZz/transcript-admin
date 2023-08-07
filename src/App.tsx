@@ -4,6 +4,7 @@ import { SWRConfig } from "swr";
 import { Header } from "components/Header";
 import { Home } from "pages/Home";
 import { RecordDetails } from "pages/RecordDetails";
+import { BASE_URL } from "constants/index";
 
 const fetcher = (input: RequestInfo | URL, init?: RequestInit) =>
   fetch(`${import.meta.env.VITE_API_URL}${input}`, init).then((res) =>
@@ -12,11 +13,11 @@ const fetcher = (input: RequestInfo | URL, init?: RequestInit) =>
 
 const router = createBrowserRouter([
   {
-    path: "/transcript-admin/",
+    path: BASE_URL,
     element: <Home />,
   },
   {
-    path: "/transcript-admin/records/:id",
+    path: `${BASE_URL}/records/:id`,
     element: <RecordDetails />,
   },
 ]);

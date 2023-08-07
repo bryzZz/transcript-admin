@@ -7,6 +7,8 @@ import { AudioPlayer } from "./AudioPlayer";
 
 // import audioSrc from "data/X2Download.app - Антон Чехов Человек в Футляре Аудиокнига Русская литература (книга чтение, школьная программа) (128 kbps).mp3";
 import { Call } from "types";
+import { BASE_URL } from "constants/index";
+import { exportToSpreadsheet } from "utils";
 
 interface RecordProps {
   data: Call;
@@ -14,6 +16,16 @@ interface RecordProps {
 }
 
 export const Record: React.FC<RecordProps> = ({ data, className }) => {
+  const handleExportClick = () => {
+    exportToSpreadsheet(
+      [
+        ["Краткая сводка", "Полная транскрибация"],
+        [data.summary, data.transcription],
+      ],
+      data.id.toString(),
+    );
+  };
+
   return (
     <div
       className={`rounded-[20px] bg-[#F3F6FE] pb-4 pl-[13px] pr-[14px] pt-[15px] ${className}`}
@@ -23,7 +35,7 @@ export const Record: React.FC<RecordProps> = ({ data, className }) => {
           <img className="h-[46px] w-[46px] rounded-full" src={Avatar2} />
           <div>
             <Link
-              to={`/transcript-admin/records/${data.id}`}
+              to={`${BASE_URL}records/${data.id}`}
               className="mb-1 text-[17px] font-medium leading-5 text-black hover:text-cyan-700"
             >
               Александр Морозов
@@ -34,7 +46,7 @@ export const Record: React.FC<RecordProps> = ({ data, className }) => {
           </div>
         </div>
 
-        <button>
+        <button onClick={handleExportClick}>
           <DirectInbox />
         </button>
       </div>

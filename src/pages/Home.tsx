@@ -4,7 +4,7 @@ import React from "react";
 
 export const Home: React.FC = () => {
   return (
-    <main className="flex gap-5">
+    <main className="flex flex-col gap-5 pb-6 md:flex-row">
       <Statistics />
       <Records />
     </main>
