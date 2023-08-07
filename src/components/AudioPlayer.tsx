@@ -16,7 +16,10 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ src }) => {
   const audioRef = useRef<HTMLAudioElement>(null);
 
   return (
-    <div className="bg-[#202542] flex items-center rounded-[35px] w-full">
+    <div
+      className="flex w-full items-center rounded-[35px] bg-[#202542]"
+      onClick={(e) => e.stopPropagation()}
+    >
       <DisplayTrack
         src={src}
         audioRef={audioRef}
