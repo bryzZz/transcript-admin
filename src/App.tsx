@@ -1,8 +1,14 @@
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { SWRConfig } from "swr";
 import { Header } from "components/Header";
 import { Home } from "pages/Home";
 import { RecordDetails } from "pages/RecordDetails";
-import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const fetcher = (input: RequestInfo | URL, init?: RequestInit) =>
+  fetch(`${import.meta.env.VITE_API_URL}${input}`, init).then((res) =>
+    res.json(),
+  );
 
 const router = createBrowserRouter([
   {
@@ -17,12 +23,18 @@ const router = createBrowserRouter([
 
 export const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#242947]">
-      <div className="mx-auto w-full max-w-[1650px] px-[15px] pt-20">
-        <Header />
+    <SWRConfig
+      value={{
+        fetcher,
+      }}
+    >
+      <div className="min-h-screen bg-[#242947]">
+        <div className="mx-auto w-full max-w-[1650px] px-[15px] pt-20">
+          <Header />
 
-        <RouterProvider router={router} />
+          <RouterProvider router={router} />
+        </div>
       </div>
-    </div>
+    </SWRConfig>
   );
 };
