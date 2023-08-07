@@ -38,10 +38,10 @@ export const Record: React.FC<RecordProps> = ({ data, className }) => {
               to={`${BASE_URL}records/${data.id}`}
               className="mb-1 text-[17px] font-medium leading-5 text-black hover:text-cyan-700"
             >
-              Александр Морозов
+              Никита Лепезин
             </Link>
             <p className="text-[10px] font-medium text-black opacity-50">
-              Менеджер
+              Поддержка
             </p>
           </div>
         </div>
