@@ -17,9 +17,12 @@ export const Records: React.FC = () => {
       return new Array(3).fill(0).map((_, i) => <SkeletonRecord key={i} />);
     }
 
-    return data?.map((data) => (
-      <Record key={data.id} data={data} className="basis-80" />
-    ));
+    return data
+      ?.sort(
+        (a, b) =>
+          new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime(),
+      )
+      .map((data) => <Record key={data.id} data={data} className="basis-80" />);
   };
 
   return (
