@@ -2,6 +2,7 @@ import React, { MouseEvent } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { ReactComponent as DirectInbox } from "assets/direct-inbox.svg";
+import { ReactComponent as Chart } from "assets/mini-chart.svg";
 import Avatar2 from "assets/unsplash_pAtA8xe_iVM-min.png";
 import { AudioPlayer } from "./AudioPlayer";
 
@@ -12,13 +13,20 @@ import { exportToSpreadsheet } from "utils";
 
 interface RecordProps {
   data: Call;
+  canDownload?: boolean;
   className?: string;
 }
 
-export const Record: React.FC<RecordProps> = ({ data, className }) => {
+export const Record: React.FC<RecordProps> = ({
+  data,
+  canDownload = false,
+  className,
+}) => {
   const navigate = useNavigate();
 
   const handleExportClick = (e: MouseEvent<HTMLButtonElement>) => {
+    if (!canDownload) return;
+
     e.stopPropagation();
 
     exportToSpreadsheet(
@@ -56,7 +64,7 @@ export const Record: React.FC<RecordProps> = ({ data, className }) => {
         </div>
 
         <button onClick={handleExportClick}>
-          <DirectInbox />
+          {canDownload ? <DirectInbox /> : <Chart />}
         </button>
       </div>
 

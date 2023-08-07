@@ -27,7 +27,7 @@ export const RecordDetails: React.FC = () => {
       ) : (
         <div className="flex flex-col gap-[20px] pb-6 md:flex-row md:pb-0">
           <div className="flex w-full flex-1 flex-col justify-stretch gap-5 md:min-w-[350px] md:max-w-[546px]">
-            <Record data={data} />
+            <Record data={data} canDownload />
 
             <div className="flex h-full flex-col gap-4 rounded-[20px] bg-[#F3F6FE] p-[15px]">
               <h3 className="text-[17px] font-medium text-black">
