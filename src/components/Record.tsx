@@ -33,7 +33,7 @@ export const Record: React.FC<RecordProps> = ({ data, className }) => {
       <div className="mb-9 flex items-center justify-between">
         <div className="flex items-center gap-[14px]">
           <img
-            className="h-[46px] w-[46px] rounded-full object-cover"
+            className="h-[46px] w-[46px] rounded-full object-cover object-top"
             src={Avatar2}
           />
           <div>

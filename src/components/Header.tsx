@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
     <header className="mb-[71px] flex items-center justify-between">
       <div className="flex items-center gap-4">
         <img
-          className="h-14 w-14 rounded-[10px] object-cover backdrop-blur-xl"
+          className="h-14 w-14 rounded-[10px] object-cover object-top backdrop-blur-xl"
           src={Avatar}
         />
         <div>
