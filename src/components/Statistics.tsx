@@ -12,7 +12,7 @@ export const Statistics: React.FC = () => {
   const { data } = useSWR<Call[]>("/calls");
 
   return (
-    <div className="flex w-full flex-1 flex-col gap-5 md:max-w-[405px]">
+    <div className="flex w-full flex-col gap-5 md:max-w-[405px]">
       <div className="flex items-center gap-[31px] rounded-[30px] bg-[#D4D8F1] p-[30px]">
         <div className="rounded-2xl bg-[#242947] p-[17px] backdrop-blur-xl">
           <Chart />

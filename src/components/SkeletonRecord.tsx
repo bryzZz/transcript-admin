@@ -2,7 +2,7 @@ import React from "react";
 
 export const SkeletonRecord: React.FC = () => {
   return (
-    <div role="status" className="basis-80 animate-pulse">
+    <div role="status" className="w-full max-w-[320px] animate-pulse">
       <div className="h-[150px] w-full rounded-[20px] bg-gray-300 pb-4 pl-[13px] pr-[14px] pt-[15px] dark:bg-gray-500">
         <div className="mb-9 flex items-center justify-between">
           <div className="flex items-center gap-[14px]">

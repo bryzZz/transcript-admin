@@ -28,7 +28,7 @@ export const Records: React.FC = () => {
   };
 
   return (
-    <div className="rounded-[30px] bg-[#FFFFFF] p-[30px]">
+    <div className="w-full rounded-[30px] bg-[#FFFFFF] p-[30px]">
       <div className="flex flex-wrap items-start gap-[30px]">
         {getContent()}
       </div>
