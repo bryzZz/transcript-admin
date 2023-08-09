@@ -29,7 +29,7 @@ export const RecordDetails: React.FC = () => {
           <div className="flex w-full flex-1 flex-col justify-stretch gap-5 md:min-w-[350px] md:max-w-[546px]">
             <Record data={data} canDownload />
 
-            <div className="flex h-full flex-col gap-4 rounded-[20px] bg-[#F3F6FE] p-[15px]">
+            {/* <div className="flex h-full flex-col gap-4 rounded-[20px] bg-[#F3F6FE] p-[15px]">
               <h3 className="text-[17px] font-medium text-black">
                 Краткая сводка
               </h3>
@@ -38,16 +38,16 @@ export const RecordDetails: React.FC = () => {
                   {data.summary}
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="w-full flex-1 rounded-[20px] bg-[#F3F6FE] p-[15px]">
             <h3 className="mb-[16px] text-[17px] font-medium text-black">
-              Полная транскрибация
+              Краткая сводка
             </h3>
             <div className="rounded-[10px] bg-[#FFFFFF] p-5">
               <div className="md:custom-scroll font-public-sans text-lg leading-7 tracking-[0.35px] text-[#1F1F1F] md:max-h-[430px] md:overflow-y-scroll md:pr-[10%]">
-                {data.transcription}
+                {data.summary}
               </div>
             </div>
           </div>
